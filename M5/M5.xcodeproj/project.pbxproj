@@ -19,6 +19,7 @@
 		65EAD5632901A1C80054C32F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65EAD5622901A1C80054C32F /* ContentView.swift */; };
 		65EAD5652902CE1D0054C32F /* ContentDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65EAD5642902CE1D0054C32F /* ContentDetailView.swift */; };
 		65EAD5682902CFE10054C32F /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65EAD5672902CFE10054C32F /* AVKit.framework */; };
+		65EAD56A2902D8460054C32F /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65EAD5692902D8460054C32F /* WebView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		65EAD5622901A1C80054C32F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		65EAD5642902CE1D0054C32F /* ContentDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDetailView.swift; sourceTree = "<group>"; };
 		65EAD5672902CFE10054C32F /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		65EAD5692902D8460054C32F /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				65EAD547290151CA0054C32F /* HomeView.swift */,
+				65EAD5692902D8460054C32F /* WebView.swift */,
 				65EAD5622901A1C80054C32F /* ContentView.swift */,
 				65EAD560290162120054C32F /* HomeViewRow.swift */,
 				65EAD5642902CE1D0054C32F /* ContentDetailView.swift */,
@@ -213,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				65EAD548290151CA0054C32F /* HomeView.swift in Sources */,
+				65EAD56A2902D8460054C32F /* WebView.swift in Sources */,
 				65EAD561290162120054C32F /* HomeViewRow.swift in Sources */,
 				65EAD5632901A1C80054C32F /* ContentView.swift in Sources */,
 				65EAD5652902CE1D0054C32F /* ContentDetailView.swift in Sources */,
