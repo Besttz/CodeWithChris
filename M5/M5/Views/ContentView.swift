@@ -18,23 +18,35 @@ struct ContentView: View {
                     ForEach(0..<model.currentModule!.content.lessons.count) { index in
                         
                         let lesson = model.currentModule!.content.lessons [index]
-                        ZStack(alignment: .leading){
-                            Rectangle()
-                                .foregroundColor(.white)
-                                .cornerRadius(10)
-                                .shadow(radius: 10)
-                                .frame(height: 66)
-                            HStack (spacing: 30) {
-                                Text("\(index + 1)")
-                                    .bold()
-                                    .padding()
-                                VStack(alignment: .leading){
-                                    Text(lesson.title)
-                                        .bold()
-                                    Text(lesson.duration)
+                        
+                        NavigationLink {
+                            ContentDetailView()
+                                .onAppear(){
+                                    model.beginLesson(index)
                                 }
-                            }
-                        }.padding(10)
+                        } label: {
+                            ZStack(alignment: .leading){
+                                Rectangle()
+                                    .foregroundColor(.white)
+                                    .cornerRadius(10)
+                                    .shadow(radius: 10)
+                                    .frame(height: 66)
+                                HStack (spacing: 30) {
+                                    Text("\(index + 1)")
+                                        .bold()
+                                        .padding()
+                                    VStack(alignment: .leading){
+                                        Text(lesson.title)
+                                            .bold()
+                                        Text(lesson.duration)
+                                    }
+                                }
+                                .foregroundColor(.black)
+                                
+                            }.padding(10)
+                            
+                        }
+                        
                     }
                 }
                 
@@ -46,10 +58,10 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         Text("hi")
-//        ContentView()
-//            .environmentObject(model)
-//            .onAppear {
-//                model.beginModule(0)
-//            }
+        //        ContentView()
+        //            .environmentObject(model)
+        //            .onAppear {
+        //                model.beginModule(0)
+        //            }
     }
 }

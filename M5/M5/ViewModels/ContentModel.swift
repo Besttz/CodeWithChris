@@ -12,8 +12,10 @@ class ContentModel: ObservableObject {
     @Published var modules = [Module]()
     
     @Published var currentModule: Module?
-    
     var currentModuleIndex = 0
+    
+    @Published var currentLesson: Lesson?
+    var currentLessonIndex = 0
     
     var styleData : Data?
     
@@ -32,7 +34,25 @@ class ContentModel: ObservableObject {
         }
         
     }
+    func beginLesson(_ index : Int)  {
+        if currentModule != nil && index < currentModule!.content.lessons.count {
+            currentLessonIndex = index
+            currentLesson =  currentModule!.content.lessons[index]
+        } else {
+            currentLessonIndex = 0
+        }
+        
+    }
 
+    func haveNextLesson() -> Bool {
+        return ((currentLessonIndex + 1) < currentModule!.content.lessons.count)
+    }
+    
+    func goNextLesson()  {
+        if haveNextLesson() {
+            beginLesson(currentLessonIndex+1)
+        }
+    }
     
     // MARK: - Data Methods
     func getLocalData() {

@@ -12,7 +12,7 @@ struct HomeView: View {
     @EnvironmentObject var model:ContentModel
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             VStack(alignment: .leading) {
                 Text("What do we want to do today?").padding(.horizontal)
                 ScrollView {

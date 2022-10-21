@@ -17,6 +17,8 @@
 		65EAD55F290157400054C32F /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65EAD55E290157400054C32F /* Models.swift */; };
 		65EAD561290162120054C32F /* HomeViewRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65EAD560290162120054C32F /* HomeViewRow.swift */; };
 		65EAD5632901A1C80054C32F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65EAD5622901A1C80054C32F /* ContentView.swift */; };
+		65EAD5652902CE1D0054C32F /* ContentDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65EAD5642902CE1D0054C32F /* ContentDetailView.swift */; };
+		65EAD5682902CFE10054C32F /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65EAD5672902CFE10054C32F /* AVKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,8 @@
 		65EAD55E290157400054C32F /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		65EAD560290162120054C32F /* HomeViewRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewRow.swift; sourceTree = "<group>"; };
 		65EAD5622901A1C80054C32F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		65EAD5642902CE1D0054C32F /* ContentDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDetailView.swift; sourceTree = "<group>"; };
+		65EAD5672902CFE10054C32F /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65EAD5682902CFE10054C32F /* AVKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -49,6 +54,7 @@
 			children = (
 				65EAD544290151CA0054C32F /* M5 */,
 				65EAD543290151CA0054C32F /* Products */,
+				65EAD5662902CFE10054C32F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -89,6 +95,7 @@
 				65EAD547290151CA0054C32F /* HomeView.swift */,
 				65EAD5622901A1C80054C32F /* ContentView.swift */,
 				65EAD560290162120054C32F /* HomeViewRow.swift */,
+				65EAD5642902CE1D0054C32F /* ContentDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -123,6 +130,14 @@
 			children = (
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		65EAD5662902CFE10054C32F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				65EAD5672902CFE10054C32F /* AVKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,6 +215,7 @@
 				65EAD548290151CA0054C32F /* HomeView.swift in Sources */,
 				65EAD561290162120054C32F /* HomeViewRow.swift in Sources */,
 				65EAD5632901A1C80054C32F /* ContentView.swift in Sources */,
+				65EAD5652902CE1D0054C32F /* ContentDetailView.swift in Sources */,
 				65EAD546290151CA0054C32F /* M5App.swift in Sources */,
 				65EAD559290152250054C32F /* ContentModel.swift in Sources */,
 				65EAD55F290157400054C32F /* Models.swift in Sources */,
