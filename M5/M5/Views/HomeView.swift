@@ -12,7 +12,7 @@ struct HomeView: View {
     @EnvironmentObject var model:ContentModel
     
     var body: some View {
-        NavigationStack {
+        NavigationStack(path:$model.navPath) {
             VStack(alignment: .leading) {
                 Text("What do we want to do today?").padding(.horizontal)
                 ScrollView {
@@ -20,14 +20,19 @@ struct HomeView: View {
         //                    .padding(.leading,20)
                         ForEach(model.modules) { module in
                             VStack(spacing: 20) {
-                                NavigationLink {
-                                    ContentView()
-                                        .onAppear {
-                                            model.beginModule(module.id)
-                                        }
-                                } label: {
+                                
+                                
+                                NavigationLink(value: module.id){
                                     HomeViewRow(image: module.content.image, title: "Learn \(module.category)", description: module.content.description, lessons: module.content.lessons.count, time: module.content.time)
+                                    
                                 }
+                                        .navigationDestination(for: Int.self) { id in
+                                            ContentView()
+                                                .onAppear {
+                                                    model.beginModule(id)
+                                                }
+                                        }
+
 
                                 NavigationLink {
                                     ContentView()

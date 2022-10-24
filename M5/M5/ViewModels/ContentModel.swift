@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 class ContentModel: ObservableObject {
     
@@ -18,6 +19,9 @@ class ContentModel: ObservableObject {
     var currentLessonIndex = 0
     
     var styleData : Data?
+    
+    
+    @Published var navPath = NavigationPath()
     
     init() {
         getLocalData()
