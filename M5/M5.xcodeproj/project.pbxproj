@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		65367421290BBB9000F23A76 /* CodeTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65367420290BBB9000F23A76 /* CodeTextView.swift */; };
 		6551E36B2907044900572164 /* RectangleCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6551E36A2907044900572164 /* RectangleCard.swift */; };
 		65EAD546290151CA0054C32F /* M5App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65EAD545290151CA0054C32F /* M5App.swift */; };
 		65EAD548290151CA0054C32F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65EAD547290151CA0054C32F /* HomeView.swift */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		65367420290BBB9000F23A76 /* CodeTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeTextView.swift; sourceTree = "<group>"; };
 		6551E36A2907044900572164 /* RectangleCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleCard.swift; sourceTree = "<group>"; };
 		65EAD542290151CA0054C32F /* M5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = M5.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65EAD545290151CA0054C32F /* M5App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = M5App.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 				65EAD5622901A1C80054C32F /* ContentView.swift */,
 				65EAD560290162120054C32F /* HomeViewRow.swift */,
 				65EAD5642902CE1D0054C32F /* ContentDetailView.swift */,
+				65367420290BBB9000F23A76 /* CodeTextView.swift */,
 				6551E36A2907044900572164 /* RectangleCard.swift */,
 			);
 			path = Views;
@@ -224,6 +227,7 @@
 				65EAD5632901A1C80054C32F /* ContentView.swift in Sources */,
 				65EAD5652902CE1D0054C32F /* ContentDetailView.swift in Sources */,
 				65EAD546290151CA0054C32F /* M5App.swift in Sources */,
+				65367421290BBB9000F23A76 /* CodeTextView.swift in Sources */,
 				6551E36B2907044900572164 /* RectangleCard.swift in Sources */,
 				65EAD559290152250054C32F /* ContentModel.swift in Sources */,
 				65EAD55F290157400054C32F /* Models.swift in Sources */,

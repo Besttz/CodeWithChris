@@ -22,6 +22,9 @@ struct ContentDetailView: View {
                     .cornerRadius(10)
                 
             }
+            
+            CodeTextView()
+            
             if model.haveNextLesson() {
                 Button {
                     model.goNextLesson()

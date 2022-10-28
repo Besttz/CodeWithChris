@@ -20,6 +20,8 @@ class ContentModel: ObservableObject {
     
     var styleData : Data?
     
+    // Current lesson description
+    @Published var currentLessonDesc = NSAttributedString()
     
     @Published var navPath = NavigationPath()
     
@@ -41,10 +43,12 @@ class ContentModel: ObservableObject {
     func beginLesson(_ index : Int)  {
         if currentModule != nil && index < currentModule!.content.lessons.count {
             currentLessonIndex = index
-            currentLesson =  currentModule!.content.lessons[index]
         } else {
             currentLessonIndex = 0
         }
+        currentLesson =  currentModule!.content.lessons[index]
+
+        currentLessonDesc = addStyling(currentLesson!.explanation)
         
     }
 
@@ -87,5 +91,23 @@ class ContentModel: ObservableObject {
             return
         }
 
+    }
+    
+    // MARK: - Code Styling
+    
+    func addStyling(_ html:String) -> NSAttributedString {
+        var data = Data()
+        // Add Styling
+        if let styleData = styleData {
+            data.append(styleData)
+        }
+        // Add HTML
+        data.append(Data(html.utf8))
+        
+        if let result = try? NSAttributedString(data: data, options: [.documentType: NSAttributedString.DocumentType.html], documentAttributes: nil) {
+            return result
+        }
+        //Return
+        return NSAttributedString()
     }
 }
